@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<f:view>
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    
+    <body>
+      <h:form>
+        <h2>
+         Confirmation inscription.
+        </h2>
+        <h4>
+          Confirmation d'inscription
+        </h4>
+        <table>
+            <tr>
+              <td>Prénom:               </td>
+              <td>
+                <h:outputText value="#{userBean.prenom}"/>             
+              </td>
+            </tr>
+            <tr>
+              <td>Nom:</td>
+              <td>
+                <h:outputText value="#{userBean.nom}"/>
+              </td>
+            </tr>
+            <tr>
+              <td>Sexe:</td>
+              <td>
+                <h:outputText value="#{userBean.genre}"/>
+              </td>
+            </tr>
+            <tr>
+              <td>Date de naissance:</td>
+              <td>
+              
+                <h:outputText value="#{userBean.datenaissance}">
+                  <f:convertDateTime pattern="MM-dd-yyyy"/>
+                </h:outputText>
+              
+              </td>
+            </tr>
+            <tr>
+              <td>Email :</td>
+              <td>
+                <h:outputText value="#{userBean.email}"/>
+              </td>
+            </tr>
+       </table>
+        <p><h:commandButton value="Editer" action="register"/>
+           
+        </p>     
+      </h:form>
+      
+     
+      
+    </body>
+    </f:view>
+    
+</html>
